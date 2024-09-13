@@ -16,6 +16,12 @@
 		848F9C382C939AD100C51575 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 848F9C372C939AD100C51575 /* FirebaseFirestoreSwift */; };
 		848F9C3A2C939AD100C51575 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 848F9C392C939AD100C51575 /* FirebaseStorage */; };
 		848F9C3C2C939AD100C51575 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 848F9C3B2C939AD100C51575 /* FirebaseStorageCombine-Community */; };
+		848F9C442C939C4F00C51575 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C432C939C4F00C51575 /* HomeView.swift */; };
+		848F9C462C939E3E00C51575 /* DrawerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C452C939E3E00C51575 /* DrawerMenu.swift */; };
+		848F9C482C939F3F00C51575 /* DrawerMenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C472C939F3F00C51575 /* DrawerMenuHeader.swift */; };
+		848F9C4A2C9402A100C51575 /* DrawerMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C492C9402A000C51575 /* DrawerMenuRowView.swift */; };
+		848F9C4C2C9403A300C51575 /* DrawerMenuOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C4B2C9403A300C51575 /* DrawerMenuOptionModel.swift */; };
+		848F9C4F2C94104100C51575 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C4E2C94104100C51575 /* DocumentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		848F9C252C9399DC00C51575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		848F9C272C9399DC00C51575 /* LavalabTechChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LavalabTechChallenge.entitlements; sourceTree = "<group>"; };
 		848F9C292C9399DC00C51575 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		848F9C432C939C4F00C51575 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		848F9C452C939E3E00C51575 /* DrawerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenu.swift; sourceTree = "<group>"; };
+		848F9C472C939F3F00C51575 /* DrawerMenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuHeader.swift; sourceTree = "<group>"; };
+		848F9C492C9402A000C51575 /* DrawerMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuRowView.swift; sourceTree = "<group>"; };
+		848F9C4B2C9403A300C51575 /* DrawerMenuOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuOptionModel.swift; sourceTree = "<group>"; };
+		848F9C4E2C94104100C51575 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 		848F9C202C9399D700C51575 /* LavalabTechChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				848F9C4D2C94103100C51575 /* DocumentView */,
 				848F9C422C939B7A00C51575 /* Model */,
 				848F9C412C939B7000C51575 /* ViewModel */,
 				848F9C402C939B5C00C51575 /* HomeView */,
@@ -95,6 +108,9 @@
 		848F9C3F2C939B5100C51575 /* DrawerMenu */ = {
 			isa = PBXGroup;
 			children = (
+				848F9C452C939E3E00C51575 /* DrawerMenu.swift */,
+				848F9C472C939F3F00C51575 /* DrawerMenuHeader.swift */,
+				848F9C492C9402A000C51575 /* DrawerMenuRowView.swift */,
 			);
 			path = DrawerMenu;
 			sourceTree = "<group>";
@@ -102,6 +118,7 @@
 		848F9C402C939B5C00C51575 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				848F9C432C939C4F00C51575 /* HomeView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -116,8 +133,17 @@
 		848F9C422C939B7A00C51575 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				848F9C4B2C9403A300C51575 /* DrawerMenuOptionModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		848F9C4D2C94103100C51575 /* DocumentView */ = {
+			isa = PBXGroup;
+			children = (
+				848F9C4E2C94104100C51575 /* DocumentView.swift */,
+			);
+			path = DocumentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +226,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848F9C442C939C4F00C51575 /* HomeView.swift in Sources */,
+				848F9C4A2C9402A100C51575 /* DrawerMenuRowView.swift in Sources */,
+				848F9C4C2C9403A300C51575 /* DrawerMenuOptionModel.swift in Sources */,
+				848F9C462C939E3E00C51575 /* DrawerMenu.swift in Sources */,
 				848F9C242C9399D700C51575 /* ContentView.swift in Sources */,
 				848F9C222C9399D700C51575 /* LavalabTechChallengeApp.swift in Sources */,
+				848F9C482C939F3F00C51575 /* DrawerMenuHeader.swift in Sources */,
+				848F9C4F2C94104100C51575 /* DocumentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
