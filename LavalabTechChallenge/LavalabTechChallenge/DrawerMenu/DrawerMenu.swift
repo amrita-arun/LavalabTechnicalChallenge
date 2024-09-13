@@ -20,7 +20,7 @@ struct DrawerMenu: View {
                     .onTapGesture { isShowing.toggle()}
                 
                 HStack {
-                    VStack(alignment: .leading, spacing: 32) {
+                    VStack(alignment: .leading, spacing: 20) {
                         DrawerMenuHeader()
                         
                         VStack {
@@ -29,7 +29,8 @@ struct DrawerMenu: View {
                                     selectedOption = option
                                 }, label: {
                                     DrawerMenuRowView(option: option, selectedOption: $selectedOption)
-                                })
+                                }
+                                )
                                 //DrawerMenuRowView(option: option)
                             }
                         }

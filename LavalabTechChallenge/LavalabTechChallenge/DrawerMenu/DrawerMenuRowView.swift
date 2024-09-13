@@ -18,16 +18,16 @@ struct DrawerMenuRowView: View {
     var body: some View {
         HStack(spacing: 20) {
             Image(systemName: option.systemImageName)
-                .imageScale(.small)
+                .imageScale(.medium)
             
             Text(option.title)
-                .font(.subheadline)
+                .font(.headline)
             
             Spacer()
         }
         .padding(.leading)
         .foregroundStyle(isSelected ? .blue: .primary)
-        .frame(width: 216, height: 44)
+        .frame(width: 230, height: 44)
         .background(isSelected ? .blue.opacity(0.25) : .clear)
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }

@@ -15,14 +15,34 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     HStack(alignment: .firstTextBaseline) {
                         Text("All Projects")
+                            .font(.title)
                             .bold()
-                            .padding()
+                            .padding(.horizontal)
                         Spacer()
                         Image(systemName: "square.split.2x2.fill")
+                            .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 25, height: 25) // Set the desired size here
                         Image(systemName: "line.3.horizontal")
-                            .padding()
+                            .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, height: 30) // Set the desired size here
+                                .padding(.horizontal)
+                            //.padding()
+                        
                         
                     }
+                    Spacer()
+                    ScrollView {
+                        ForEach(DocumentDetailsModel.allCases) { doc in
+                            DocumentCardView(docName: doc.title, editedLast: doc.editedLast)
+                            //DrawerMenuRowView(option: option)
+                        }
+                    }
+                
+                    
+                    Spacer()
+
                 }
                 
                 VStack {
@@ -36,7 +56,7 @@ struct HomeView: View {
                                 .resizable()
                                 .frame(width: 35, height: 35)
                                 .padding()
-                                .background(Color.blue)
+                                .background(Color.purple)
                                 .foregroundColor(.white)
                                 .clipShape(Circle())
                                 .shadow(radius: 10)
@@ -45,21 +65,6 @@ struct HomeView: View {
                         .padding(.bottom, 20)
                     }
                 }
-                /*
-                Button() {
-                    // Action
-                } label: {
-                    Image(systemName: "plus")
-                        .font(.title.weight(.semibold))
-                        .padding()
-                        .background(Color.pink)
-                        .foregroundColor(.white)
-                        .clipShape(Circle())
-                        .shadow(radius: 4, x: 0, y: 4)
-
-                }
-                .padding()
-                 */
                 
                 DrawerMenu(isShowing: $showMenu)
             }
@@ -75,6 +80,7 @@ struct HomeView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 40, height: 40) // Set the desired size here
                     })
+                    .foregroundColor(.black)
                 }
                 ToolbarItem(placement: .principal) {
                     Image("AroLogo")

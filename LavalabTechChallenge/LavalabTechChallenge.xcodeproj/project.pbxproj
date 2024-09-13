@@ -21,7 +21,8 @@
 		848F9C482C939F3F00C51575 /* DrawerMenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C472C939F3F00C51575 /* DrawerMenuHeader.swift */; };
 		848F9C4A2C9402A100C51575 /* DrawerMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C492C9402A000C51575 /* DrawerMenuRowView.swift */; };
 		848F9C4C2C9403A300C51575 /* DrawerMenuOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C4B2C9403A300C51575 /* DrawerMenuOptionModel.swift */; };
-		848F9C4F2C94104100C51575 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C4E2C94104100C51575 /* DocumentView.swift */; };
+		848F9C512C942D9100C51575 /* DocumentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C502C942D9100C51575 /* DocumentCardView.swift */; };
+		848F9C552C9431E400C51575 /* DocumentDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C542C9431E400C51575 /* DocumentDetailsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,8 @@
 		848F9C472C939F3F00C51575 /* DrawerMenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuHeader.swift; sourceTree = "<group>"; };
 		848F9C492C9402A000C51575 /* DrawerMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuRowView.swift; sourceTree = "<group>"; };
 		848F9C4B2C9403A300C51575 /* DrawerMenuOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuOptionModel.swift; sourceTree = "<group>"; };
-		848F9C4E2C94104100C51575 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		848F9C502C942D9100C51575 /* DocumentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCardView.swift; sourceTree = "<group>"; };
+		848F9C542C9431E400C51575 /* DocumentDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDetailsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				848F9C4B2C9403A300C51575 /* DrawerMenuOptionModel.swift */,
+				848F9C542C9431E400C51575 /* DocumentDetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,7 +144,7 @@
 		848F9C4D2C94103100C51575 /* DocumentView */ = {
 			isa = PBXGroup;
 			children = (
-				848F9C4E2C94104100C51575 /* DocumentView.swift */,
+				848F9C502C942D9100C51575 /* DocumentCardView.swift */,
 			);
 			path = DocumentView;
 			sourceTree = "<group>";
@@ -228,12 +231,13 @@
 			files = (
 				848F9C442C939C4F00C51575 /* HomeView.swift in Sources */,
 				848F9C4A2C9402A100C51575 /* DrawerMenuRowView.swift in Sources */,
+				848F9C552C9431E400C51575 /* DocumentDetailsModel.swift in Sources */,
 				848F9C4C2C9403A300C51575 /* DrawerMenuOptionModel.swift in Sources */,
 				848F9C462C939E3E00C51575 /* DrawerMenu.swift in Sources */,
 				848F9C242C9399D700C51575 /* ContentView.swift in Sources */,
+				848F9C512C942D9100C51575 /* DocumentCardView.swift in Sources */,
 				848F9C222C9399D700C51575 /* LavalabTechChallengeApp.swift in Sources */,
 				848F9C482C939F3F00C51575 /* DrawerMenuHeader.swift in Sources */,
-				848F9C4F2C94104100C51575 /* DocumentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
