@@ -23,7 +23,7 @@ struct DocumentCardView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50) // Adjust this to make the image smaller
-                            .foregroundColor(Color.purple) // Optional: set the color of the image
+                            .foregroundColor(Color("AroPurple"))// Optional: set the color of the image
                     }
                     .frame(maxWidth: .infinity)
                     

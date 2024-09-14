@@ -79,7 +79,7 @@ struct HomeView: View {
                                 .resizable()
                                 .frame(width: 35, height: 35)
                                 .padding()
-                                .background(Color.purple)
+                                .background(Color("AroPurple"))
                                 .foregroundColor(.white)
                                 .clipShape(Circle())
                                 .shadow(radius: 10)
