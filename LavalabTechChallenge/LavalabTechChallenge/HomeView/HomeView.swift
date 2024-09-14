@@ -40,7 +40,7 @@ struct HomeView: View {
                     }
                     Spacer()
                     ScrollView {
-                        ForEach(projectFiles) { proj in
+                        ForEach(projectFiles, id: \.id) { proj in
                             DocumentCardView(docName: proj.title, editedLast: proj.editedLast)
                         }
                         /*
@@ -67,9 +67,13 @@ struct HomeView: View {
                         Spacer()
                         Button(action: {
                             isPopupPresented.toggle()
+                            /*
                             Task {
-                                viewModel.addDoc(title: "Project 1", lastEdit: "1m ago")
+                                let lastEdited = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .short)
+                                viewModel.addDoc(title: newProjectTitle, lastEdit: lastEdited)
+                                //viewModel.addDoc(title: "Project 1", lastEdit: lastEdited)
                             }
+                             */
                         }) {
                             Image(systemName: "plus")
                                 .resizable()
@@ -118,7 +122,11 @@ struct HomeView: View {
                                 Spacer()
 
                                 Button(action: {
-                                    // Handle adding the new project here
+                                    Task {
+                                        let lastEdited = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .short)
+                                        viewModel.addDoc(title: newProjectTitle, lastEdit: lastEdited)
+                                        await loadProjects()
+                                    }
                                     print("New project title: \(newProjectTitle)")
                                     withAnimation {
                                         isPopupPresented = false
@@ -178,6 +186,7 @@ struct HomeView: View {
     
     func loadProjects() async {
         projectFiles = await viewModel.getAllDocs()
+        print(projectFiles)
     }
 
 }
