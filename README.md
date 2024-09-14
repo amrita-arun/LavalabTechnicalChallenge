@@ -5,4 +5,5 @@ My submission for the LavaLab Technical Challenge includes the UI provided in th
 <img width="324" alt="Screenshot 2024-09-13 at 11 34 51 PM" src="https://github.com/user-attachments/assets/71664bbb-67e9-419a-9355-8aae72dae412">
 <img width="334" alt="Screenshot 2024-09-13 at 11 35 23 PM" src="https://github.com/user-attachments/assets/6d1fe82e-9629-4f51-a4b3-ece4cf977888">
 <img width="336" alt="Screenshot 2024-09-13 at 11 35 36 PM" src="https://github.com/user-attachments/assets/0a4aa712-34c9-41be-bba7-57ef4f41d4b8">
+<img width="1440" alt="Screenshot 2024-09-13 at 11 46 25 PM" src="https://github.com/user-attachments/assets/0fe972ff-bef6-470e-b491-146269036880">
 
