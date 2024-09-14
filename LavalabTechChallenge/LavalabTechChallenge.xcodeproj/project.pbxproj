@@ -26,7 +26,6 @@
 		848F9C592C94D62E00C51575 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848F9C582C94D62D00C51575 /* GoogleService-Info.plist */; };
 		848F9C5B2C94D72700C51575 /* DocViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C5A2C94D72700C51575 /* DocViewModel.swift */; };
 		848F9C5F2C94E0AC00C51575 /* ProjectFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C5E2C94E0AC00C51575 /* ProjectFile.swift */; };
-		848F9C622C9507C000C51575 /* AddPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F9C612C9507C000C51575 /* AddPopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +45,6 @@
 		848F9C582C94D62D00C51575 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		848F9C5A2C94D72700C51575 /* DocViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocViewModel.swift; sourceTree = "<group>"; };
 		848F9C5E2C94E0AC00C51575 /* ProjectFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFile.swift; sourceTree = "<group>"; };
-		848F9C612C9507C000C51575 /* AddPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +110,6 @@
 		848F9C3D2C939AFE00C51575 /* AddView */ = {
 			isa = PBXGroup;
 			children = (
-				848F9C612C9507C000C51575 /* AddPopupView.swift */,
 			);
 			name = AddView;
 			path = "New Group";
@@ -255,7 +252,6 @@
 				848F9C4A2C9402A100C51575 /* DrawerMenuRowView.swift in Sources */,
 				848F9C552C9431E400C51575 /* DocumentDetailsModel.swift in Sources */,
 				848F9C4C2C9403A300C51575 /* DrawerMenuOptionModel.swift in Sources */,
-				848F9C622C9507C000C51575 /* AddPopupView.swift in Sources */,
 				848F9C462C939E3E00C51575 /* DrawerMenu.swift in Sources */,
 				848F9C242C9399D700C51575 /* ContentView.swift in Sources */,
 				848F9C5F2C94E0AC00C51575 /* ProjectFile.swift in Sources */,

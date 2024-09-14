@@ -28,14 +28,12 @@ struct HomeView: View {
                         Image(systemName: "square.split.2x2.fill")
                             .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 25, height: 25) // Set the desired size here
+                                .frame(width: 25, height: 25)
                         Image(systemName: "line.3.horizontal")
                             .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30) // Set the desired size here
+                                .frame(width: 30, height: 30)
                                 .padding(.horizontal)
-                            //.padding()
-                        
                         
                     }
                     Spacer()
@@ -43,12 +41,6 @@ struct HomeView: View {
                         ForEach(projectFiles, id: \.id) { proj in
                             DocumentCardView(docName: proj.title, editedLast: proj.editedLast)
                         }
-                        /*
-                        ForEach(DocumentDetailsModel.allCases) { doc in
-                            DocumentCardView(docName: doc.title, editedLast: doc.editedLast)
-                            //DrawerMenuRowView(option: option)
-                        }
-                         */
                     }
                     .onAppear {
                         Task {
@@ -67,13 +59,6 @@ struct HomeView: View {
                         Spacer()
                         Button(action: {
                             isPopupPresented.toggle()
-                            /*
-                            Task {
-                                let lastEdited = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .short)
-                                viewModel.addDoc(title: newProjectTitle, lastEdit: lastEdited)
-                                //viewModel.addDoc(title: "Project 1", lastEdit: lastEdited)
-                            }
-                             */
                         }) {
                             Image(systemName: "plus")
                                 .resizable()
@@ -160,7 +145,7 @@ struct HomeView: View {
                         Image(systemName: "line.3.horizontal")
                             .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 40, height: 40) // Set the desired size here
+                                .frame(width: 40, height: 40)
                     })
                     .foregroundColor(.black)
                 }
@@ -168,14 +153,14 @@ struct HomeView: View {
                     Image("AroLogo")
                         .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 150, height: 150) // Set the desired size here
+                            .frame(width: 150, height: 150)
                             
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Image(systemName: "magnifyingglass")
                         .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 35, height: 35) // Set the desired size here
+                            .frame(width: 35, height: 35) 
                 }
 
             }

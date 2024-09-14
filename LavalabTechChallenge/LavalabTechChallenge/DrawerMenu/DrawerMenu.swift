@@ -31,7 +31,6 @@ struct DrawerMenu: View {
                                     DrawerMenuRowView(option: option, selectedOption: $selectedOption)
                                 }
                                 )
-                                //DrawerMenuRowView(option: option)
                             }
                         }
                         

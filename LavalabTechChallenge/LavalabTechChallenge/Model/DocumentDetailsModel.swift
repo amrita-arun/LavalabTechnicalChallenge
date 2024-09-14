@@ -41,5 +41,5 @@ enum DocumentDetailsModel: Int, CaseIterable {
 }
 
 extension DocumentDetailsModel: Identifiable {
-    var id: Int {return self.rawValue} //assigns each one of our cases a unique ID so we don't have to assign IDs manually
+    var id: Int {return self.rawValue} 
 }
