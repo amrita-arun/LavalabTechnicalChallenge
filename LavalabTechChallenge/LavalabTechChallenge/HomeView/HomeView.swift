@@ -9,6 +9,12 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var showMenu = false
+    @EnvironmentObject var viewModel: DocViewModel
+    @State var projectFiles: [ProjectFile]
+    @State private var isPopupPresented: Bool = false
+    @State private var newProjectTitle: String = ""
+
+    
     var body: some View {
         NavigationStack {
             ZStack() {
@@ -34,9 +40,19 @@ struct HomeView: View {
                     }
                     Spacer()
                     ScrollView {
+                        ForEach(projectFiles) { proj in
+                            DocumentCardView(docName: proj.title, editedLast: proj.editedLast)
+                        }
+                        /*
                         ForEach(DocumentDetailsModel.allCases) { doc in
                             DocumentCardView(docName: doc.title, editedLast: doc.editedLast)
                             //DrawerMenuRowView(option: option)
+                        }
+                         */
+                    }
+                    .onAppear {
+                        Task {
+                            await loadProjects()
                         }
                     }
                 
@@ -50,7 +66,10 @@ struct HomeView: View {
                     HStack {
                         Spacer()
                         Button(action: {
-                            // Action for the button
+                            isPopupPresented.toggle()
+                            Task {
+                                viewModel.addDoc(title: "Project 1", lastEdit: "1m ago")
+                            }
                         }) {
                             Image(systemName: "plus")
                                 .resizable()
@@ -65,6 +84,61 @@ struct HomeView: View {
                         .padding(.bottom, 20)
                     }
                 }
+                
+                if isPopupPresented {
+                        Color.black.opacity(0.4)
+                            .edgesIgnoringSafeArea(.all)
+                            .onTapGesture {
+                                withAnimation {
+                                    isPopupPresented = false
+                                }
+                            }
+
+                        VStack(spacing: 16) {
+                            Text("New Project")
+                                .font(.headline)
+                                .padding()
+
+                            TextField("Enter project title", text: $newProjectTitle)
+                                .padding()
+                                .background(Color(.systemGray6))
+                                .cornerRadius(8)
+
+                            HStack {
+                                Button(action: {
+                                    withAnimation {
+                                        isPopupPresented = false
+                                    }
+                                }) {
+                                    Text("Cancel")
+                                        .foregroundColor(.red)
+                                }
+                                .padding(.horizontal)
+
+                                Spacer()
+
+                                Button(action: {
+                                    // Handle adding the new project here
+                                    print("New project title: \(newProjectTitle)")
+                                    withAnimation {
+                                        isPopupPresented = false
+                                    }
+                                }) {
+                                    Text("Add")
+                                        .foregroundColor(.blue)
+                                }
+                                .padding(.horizontal)
+                            }
+                            .padding(.top, 8)
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(12)
+                        .shadow(radius: 10)
+                        .frame(maxWidth: 300)
+                        .transition(.scale)
+                    }
+                        
                 
                 DrawerMenu(isShowing: $showMenu)
             }
@@ -101,10 +175,15 @@ struct HomeView: View {
             
         }
     }
+    
+    func loadProjects() async {
+        projectFiles = await viewModel.getAllDocs()
+    }
+
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(projectFiles: [])
     }
 }

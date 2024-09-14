@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: DocViewModel
+    
     var body: some View {
-        HomeView()
+        HomeView(projectFiles: [])
+            .environmentObject(viewModel)
     }
 }
 
